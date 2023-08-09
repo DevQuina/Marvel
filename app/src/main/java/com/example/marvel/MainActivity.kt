@@ -6,18 +6,12 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.marvel.presentation.CharacterModel
-import com.example.marvel.presentation.CharacterlListScreen
+import com.example.marvel.presentation.list.CharacterListScreen
 import com.example.marvel.ui.theme.MarvelTheme
 
 class MainActivity : ComponentActivity() {
-    private val dataList = listOf(CharacterModel(1,"Wanda","something"),
-    CharacterModel(2,"Vision","something")
-    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -27,7 +21,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    CharacterlListScreen(dataList = dataList)
+                    CharacterListScreen()
                 }
             }
         }

@@ -25,7 +25,7 @@ import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun CharacterListScreen(
-
+    onItemClick: (Int) -> Unit,
     viewModel: CharacterListViewModel = koinViewModel()
 ) {
 
@@ -51,7 +51,7 @@ fun CharacterListScreen(
         ) { innerPadding ->
         HomeContent(
             modifier = Modifier.padding(innerPadding),
-            onItemClicked = {  },
+            onItemClick = { onItemClick(it) },
             isLoading = state.isLoading,
             characters = state.charactersList
         )
@@ -59,14 +59,12 @@ fun CharacterListScreen(
 }
 
 
-
-
 @Composable
 private fun HomeContent(
     modifier: Modifier = Modifier,
-    onItemClicked: (Int) -> Unit,
     isLoading: Boolean = false,
     characters: List<CharacterModel> = emptyList(),
+    onItemClick: (Int) -> Unit,
 ) {
 
     Surface(
@@ -80,13 +78,14 @@ private fun HomeContent(
                 items(characters.size) { index ->
                     ShowCharacterList(
                         modifier = Modifier.fillMaxWidth(),
-                        item = characters [index]
+                        item = characters[index],
+                        onItemClick = { onItemClick(it) }
                     )
+                }
             }
-    }
-    )
+        )
         if (isLoading) FullScreenLoading()
-}
+    }
 }
 
 @Composable

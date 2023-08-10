@@ -1,18 +1,13 @@
 package com.example.marvel.data.repository
 
+import com.example.marvel.data.CharacterDTO.CharacterDTO
 import com.example.marvel.data.CharacterDTO.MarvelApi
 
 import com.example.marvel.data.dto.CharactersDTO
+import com.example.marvel.domain.model.CharacterModel
 
 
 import com.example.marvel.domain.model.repository.MarvelRepository
-import com.example.marvel.utils.Constants
-import com.example.marvel.utils.State
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
-import retrofit2.HttpException
-import java.io.IOException
-import java.lang.Exception
 
 
 class MarvelRepositoryImplementation (
@@ -22,9 +17,9 @@ class MarvelRepositoryImplementation (
         return api.getAllCharacters(offset=offset.toString())
     }
 
-   /* override suspend fun getCharacterById(id: String): CharacterDTO {
-        return api.getCharacterById(id)
-    }*/
+   override suspend fun getCharacterById(id: String): CharacterModel {
+        return  api.getCharacterById(id)
+   }
 
 
 }

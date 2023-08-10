@@ -1,11 +1,11 @@
 package com.example.marvel.data.dto
 
-import com.example.marvel.data.dto.CharacterDTO.Comics
-import com.example.marvel.data.dto.CharacterDTO.Events
-import com.example.marvel.data.dto.CharacterDTO.Series
-import com.example.marvel.data.dto.CharacterDTO.Stories
-import com.example.marvel.data.dto.CharacterDTO.Thumbnail
-import com.example.marvel.data.dto.CharacterDTO.Url
+import com.example.marvel.data.CharacterDTO.Comics
+import com.example.marvel.data.CharacterDTO.Events
+import com.example.marvel.data.CharacterDTO.Series
+import com.example.marvel.data.CharacterDTO.Stories
+import com.example.marvel.data.CharacterDTO.Thumbnail
+import com.example.marvel.data.CharacterDTO.Url
 import com.example.marvel.domain.model.CharacterModel
 
 data class Result(
@@ -21,7 +21,7 @@ data class Result(
     val thumbnail: Thumbnail,
     val urls: List<Url>
 ){
-    fun toCharacter(): CharacterModel {
+    fun toListCharacter(): CharacterModel {
         return CharacterModel(
             id=id,
             name=name,

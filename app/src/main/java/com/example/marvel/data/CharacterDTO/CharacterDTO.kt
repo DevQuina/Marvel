@@ -1,8 +1,8 @@
-package com.example.marvel.data.dto.CharacterDTO
+package com.example.marvel.data.CharacterDTO
 
 import com.example.marvel.data.dto.Data
 
-/*
+
 data class CharacterDTO (
     val attributionHTML: String,
     val attributionText: String,
@@ -11,4 +11,4 @@ data class CharacterDTO (
     val `data`: Data,
     val etag: String,
     val status: String
-)*/
+)

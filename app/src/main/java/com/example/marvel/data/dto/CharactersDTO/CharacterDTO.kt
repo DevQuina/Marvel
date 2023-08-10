@@ -1,6 +1,6 @@
 package com.example.marvel.data.dto
 
-import com.example.marvel.data.dto.CharacterDTO.Data
+import com.example.marvel.data.CharacterDTO.Data
 
 data class CharactersDTO(
     val attributionHTML: String,

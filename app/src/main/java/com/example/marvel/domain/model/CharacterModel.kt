@@ -1,6 +1,6 @@
 package com.example.marvel.domain.model
 
-import com.example.marvel.data.dto.Thumbnail
+
 
 data class CharacterModel(
     val id : Int,

@@ -1,8 +1,6 @@
-package com.example.marvel.data.dto
+package com.example.marvel.data.CharacterDTO
 
-import com.example.marvel.data.CharacterDTO.Item
-
-data class Events(
+data class Series(
     val available: Int,
     val collectionURI: String,
     val items: List<Item>,

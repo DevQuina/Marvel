@@ -15,7 +15,7 @@ class CharactersUseCase(
         try {
             emit(State.Loading<List<CharacterModel>>())
             val list = repository.getAllCharacters(offset=offset).data.results.map {
-                it.toCharacter()
+                it.toListCharacter()
             }
             emit(State.Success<List<CharacterModel>>(list))
         }

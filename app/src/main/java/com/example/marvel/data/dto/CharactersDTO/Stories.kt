@@ -1,6 +1,6 @@
 package com.example.marvel.data.dto
 
-import com.example.marvel.data.dto.CharacterDTO.ItemXXX
+import com.example.marvel.data.CharacterDTO.ItemXXX
 
 data class Stories(
     val available: Int,

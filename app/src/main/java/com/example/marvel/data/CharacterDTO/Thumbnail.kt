@@ -1,4 +1,4 @@
-package com.example.marvel.data.dto.CharacterDTO
+package com.example.marvel.data.CharacterDTO
 
 data class Thumbnail(
     val extension: String,

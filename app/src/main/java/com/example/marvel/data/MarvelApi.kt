@@ -1,14 +1,14 @@
-package com.example.marvel.data.CharacterDTO
+package com.example.marvel.data.characterDto
 
 
-import com.example.marvel.data.dto.CharactersDTO
-import com.example.marvel.domain.model.CharacterModel
+import com.example.marvel.data.dto.charactersDto.CharactersDTO
 import com.example.marvel.utils.Constants
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface MarvelApi {
+
     @GET("/v1/public/characters")
     suspend fun getAllCharacters(
         @Query("apikey") apikey: String = Constants.API_KEY,
@@ -22,5 +22,5 @@ interface MarvelApi {
       @Query("ts") ts:String= Constants.timeStamp,
       @Query("apikey") apikey:String= Constants.API_KEY,
       @Query("hash") hash:String= Constants.hash(),
-    ): CharacterModel
+    ): CharactersDTO
 }

@@ -1,10 +1,10 @@
 package com.example.marvel.data.dto
 
-import com.example.marvel.data.CharacterDTO.ItemXXX
 
-data class Stories(
+
+data class Series(
     val available: Int,
     val collectionURI: String,
-    val items: List<ItemXXX>,
+    val items: List<Item>,
     val returned: Int
 )

@@ -1,8 +1,8 @@
 package com.example.marvel.data.dto
 
-import com.example.marvel.data.CharacterDTO.Item
 
-data class Comics(
+
+data class Events(
     val available: Int,
     val collectionURI: String,
     val items: List<Item>,

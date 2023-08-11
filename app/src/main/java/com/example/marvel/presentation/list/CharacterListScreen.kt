@@ -77,10 +77,9 @@ private fun HomeContent(
             content = {
                 items(characters.size) { index ->
                     ShowCharacterList(
-                        modifier = Modifier.fillMaxWidth(),
-                        item = characters[index],
-                        onItemClick = { onItemClick(it) }
-                    )
+
+                        item = characters[index]
+                    ) { onItemClick(it) }
                 }
             }
         )

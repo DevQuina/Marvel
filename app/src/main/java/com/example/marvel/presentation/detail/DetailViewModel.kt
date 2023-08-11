@@ -8,7 +8,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.marvel.domain.model.CharacterModel
+import com.example.marvel.data.dto.charactersDto.CharactersDTO
 import com.example.marvel.domain.use_cases.CharacterUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -21,8 +21,8 @@ class DetailViewModel(
     var state by mutableStateOf(DetailState())
         private set
 
-    private val _character = MutableLiveData<CharacterModel>()
-    val character: LiveData<CharacterModel> get() = _character
+    private val _character = MutableLiveData<CharactersDTO>()
+    val character: LiveData<CharactersDTO> get() = _character
 
     private val _errorMessage = MutableLiveData<String?>()
     val errorMessage: LiveData<String?> get() = _errorMessage

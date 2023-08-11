@@ -1,10 +1,8 @@
 package com.example.marvel.data.repository
 
-import com.example.marvel.data.CharacterDTO.CharacterDTO
-import com.example.marvel.data.CharacterDTO.MarvelApi
+import com.example.marvel.data.characterDto.MarvelApi
 
-import com.example.marvel.data.dto.CharactersDTO
-import com.example.marvel.domain.model.CharacterModel
+import com.example.marvel.data.dto.charactersDto.CharactersDTO
 
 
 import com.example.marvel.domain.model.repository.MarvelRepository
@@ -17,7 +15,7 @@ class MarvelRepositoryImplementation (
         return api.getAllCharacters(offset=offset.toString())
     }
 
-   override suspend fun getCharacterById(id: String): CharacterModel {
+   override suspend fun getCharacterById(id: String): CharactersDTO {
         return  api.getCharacterById(id)
    }
 

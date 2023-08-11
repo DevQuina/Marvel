@@ -1,6 +1,6 @@
-package com.example.marvel.data.CharacterDTO
+package com.example.marvel.data.dto
 
-import com.example.marvel.data.dto.Result
+
 
 data class Data(
     val count: Int,

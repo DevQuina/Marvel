@@ -1,10 +1,11 @@
 package com.example.marvel.di
 
-import coil.ImageLoader
-import com.example.marvel.data.CharacterDTO.MarvelApi
+import com.example.marvel.data.characterDto.MarvelApi
 import com.example.marvel.data.repository.MarvelRepositoryImplementation
 import com.example.marvel.domain.model.repository.MarvelRepository
 import com.example.marvel.utils.Constants
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -29,6 +30,12 @@ val dataModule = module {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
+    }
+
+    single<Moshi> {
+        Moshi.Builder()
+            .addLast(KotlinJsonAdapterFactory())
+            .build()
     }
 
     single <MarvelRepository>{ MarvelRepositoryImplementation (get()) }

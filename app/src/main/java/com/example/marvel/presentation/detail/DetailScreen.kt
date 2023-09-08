@@ -69,8 +69,8 @@ private fun DetailContent(
                 modifier = Modifier
                     .size(150.dp)
                     .clip(CircleShape),
-                placeholder = painterResource(id = R.drawable.wanda),
-                error = painterResource(id = R.drawable.wanda),
+                placeholder = painterResource(id = R.drawable.abomb),
+                error = painterResource(id = R.drawable.abomb),
                 model = ImageRequest.Builder(LocalContext.current)
                     .data("${item?.thumbnail}/.${item?.thumbnailExt}")
                     .build(), contentDescription = ""
@@ -86,7 +86,7 @@ private fun DetailContent(
             ) {
 
                 Text(
-                    text = item?.name ?: "Wanda",
+                    text = item?.name ?: "A-Bomb (HAS)",
                     color = Color.Black,
                     fontSize = 30.sp,
                     fontWeight = FontWeight.Bold
@@ -105,7 +105,9 @@ private fun DetailContent(
                 Spacer(modifier = Modifier.height(20.dp))
                 Text(
                     text = item?.description
-                        ?: "Wanda Maximoff, the Scarlet Witch, is a Romani sorceress and twin sister of the speedster Quicksilver. Once believed to have been mutant children of Magneto, the twins are in truth orphans enhanced by the High Evolutionary at Mount Wundagore in Transia. The Scarlet Witch became a conduit of chaos magic, allowing her to shift probabilities and warp reality itself by casting various \"hexes\".[6][23] After being saved from an angry mob by Magneto, the Scarlet Witch and her brother joined the Brotherhood of Evil Mutants to fight for Magneto's mutant supremacy cause.[4] Disagreeing with Magneto's ruthless approach to human hostilities towards mutants, the twins left him and joined the super-heroic Avengers instead",
+                        ?: "Rick Jones has been Hulk's best bud since day one, but now he's more than a " +
+                        "friend...he's a teammate! Transformed by a Gamma energy explosion, A-Bomb's thick, armored skin is just as strong and powerful as it is blue. And when he curls into action, he uses it like a " +
+                        "giant bowling ball of destruction!",
                     maxLines = 4,
                     overflow = TextOverflow.Ellipsis
                 )
